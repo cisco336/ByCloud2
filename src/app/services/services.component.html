@@ -1,3 +1,11 @@
-<p>
-  services works!
-</p>
+<ul>
+  <li  *ngFor="let cont of contents">
+    <br>
+    <p>ID: {{cont.id}}</p>
+    <p>Author: {{cont.author}}</p>
+    <p>Content: {{cont.content}}</p>
+    <br>
+    <hr>
+  </li>
+</ul>
+

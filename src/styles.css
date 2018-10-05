@@ -14,6 +14,8 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: fixed;
+  width: 100%;
 }
 
 nav .logo {
@@ -34,10 +36,22 @@ nav a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 20px;
+  height: 20px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-bottom-left-radius: 15px;
+  -webkit-box-shadow: 0 8px 20px -5px #b3b3b3;
+          box-shadow: 0 8px 20px -5px #b3b3b3;
 }
 
 .nav-toggler:focus {
@@ -62,22 +76,24 @@ nav a {
   left: 0px;
   content: '';
   background: #333;
+  border-bottom-left-radius: 15px;
   width: 100%;
   height: 100%;
 }
 
 .nav-toggler .tog-bar {
+  margin: 0 auto 0 auto;
   z-index: 99;
-  border: 2px solid #333;
+  border: 3px solid #333;
   border-radius: 6px;
-  margin: 3px 5px;
-  width: 20px;
-  -webkit-transition: all .5s ease-out;
-  transition: all .5s ease-out;
+  margin: 0px 0px;
+  width: 1px;
+  -webkit-transition: all .2s ease-out;
+  transition: all .2s ease-out;
 }
 
 .nav-toggler .tog-bar:nth-child(2) {
-  margin: 0px 5px;
+  margin: 5px 0px;
 }
 
 .nav-toggler .tog-bar.show {
@@ -95,8 +111,9 @@ nav a {
 }
 
 .nav-toggler .tog-bar.bar1.show {
-  -webkit-transform: translate(0, 7px) rotate(-45deg);
-          transform: translate(0, 7px) rotate(-45deg);
+  width: 20px;
+  -webkit-transform: translate(0, 11px) rotate(-45deg);
+          transform: translate(0, 11px) rotate(-45deg);
 }
 
 .nav-toggler .tog-bar.bar2.show {
@@ -109,7 +126,8 @@ nav a {
 }
 
 .nav-toggler .tog-bar.bar3.show {
-  -webkit-transform: translate(0, -7px) rotate(45deg);
-          transform: translate(0, -7px) rotate(45deg);
+  width: 20px;
+  -webkit-transform: translate(0, -11px) rotate(45deg);
+          transform: translate(0, -11px) rotate(45deg);
 }
 /*# sourceMappingURL=styles.css.map */
