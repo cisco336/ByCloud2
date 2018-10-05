@@ -1,0 +1,12 @@
+<nav>
+  <a routerLink="home">
+      <span class="logo">
+        Logo
+      </span>
+  </a>
+  <div class="nav-toggler" (click)="show=!show" [ngClass]="show ? 'show' : ''">
+    <span class="tog-bar bar1" [ngClass]="show ? 'show' : ''"></span>
+    <span class="tog-bar bar2" [ngClass]="show ? 'show' : ''"></span>
+    <span class="tog-bar bar3" [ngClass]="show ? 'show' : ''"></span>
+  </div>
+</nav>

@@ -1,0 +1,13 @@
+nav {
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo {
+        padding-left: 16px;
+    }
+    a {
+        color: $dark-gray;
+        text-decoration: none;
+    }
+}

@@ -1,1 +1,115 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+nav {
+  background: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav .logo {
+  padding-left: 16px;
+}
+
+nav a {
+  color: #333;
+  text-decoration: none;
+}
+
+.nav-toggler {
+  position: relative;
+  border: none;
+  padding: 16px;
+  z-index: 100;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.nav-toggler:focus {
+  outline: none !important;
+}
+
+.nav-toggler::before {
+  z-index: 98;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  content: '';
+  background: transparent;
+  width: 0%;
+  height: 0%;
+  -webkit-transition: all 0.5s cubic-bezier(0.82, -0.65, 0.28, 1.77);
+  transition: all 0.5s cubic-bezier(0.82, -0.65, 0.28, 1.77);
+}
+
+.nav-toggler.show::before {
+  top: 0px;
+  left: 0px;
+  content: '';
+  background: #333;
+  width: 100%;
+  height: 100%;
+}
+
+.nav-toggler .tog-bar {
+  z-index: 99;
+  border: 2px solid #333;
+  border-radius: 6px;
+  margin: 3px 5px;
+  width: 20px;
+  -webkit-transition: all .5s ease-out;
+  transition: all .5s ease-out;
+}
+
+.nav-toggler .tog-bar:nth-child(2) {
+  margin: 0px 5px;
+}
+
+.nav-toggler .tog-bar.show {
+  border-color: #ddf845;
+}
+
+.nav-toggler .tog-bar.bar1, .nav-toggler .tog-bar.bar3 {
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+.nav-toggler .tog-bar.bar1 {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+.nav-toggler .tog-bar.bar1.show {
+  -webkit-transform: translate(0, 7px) rotate(-45deg);
+          transform: translate(0, 7px) rotate(-45deg);
+}
+
+.nav-toggler .tog-bar.bar2.show {
+  opacity: 0;
+}
+
+.nav-toggler .tog-bar.bar3 {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+.nav-toggler .tog-bar.bar3.show {
+  -webkit-transform: translate(0, -7px) rotate(45deg);
+          transform: translate(0, -7px) rotate(45deg);
+}
+/*# sourceMappingURL=styles.css.map */
