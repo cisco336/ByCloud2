@@ -54,6 +54,16 @@ nav a {
           box-shadow: 0 8px 20px -5px #b3b3b3;
 }
 
+.nav-toggler:hover .tog-bar.bar1 {
+  -webkit-transform: translateX(-5px);
+          transform: translateX(-5px);
+}
+
+.nav-toggler:hover .tog-bar.bar3 {
+  -webkit-transform: translateX(5px);
+          transform: translateX(5px);
+}
+
 .nav-toggler:focus {
   outline: none !important;
 }
@@ -85,7 +95,7 @@ nav a {
   margin: 0 auto 0 auto;
   z-index: 99;
   border: 3px solid #333;
-  border-radius: 6px;
+  border-radius: 100%;
   margin: 0px 0px;
   width: 1px;
   -webkit-transition: all .2s ease-out;
@@ -97,10 +107,11 @@ nav a {
 }
 
 .nav-toggler .tog-bar.show {
+  border-radius: 6px;
   border-color: #ddf845;
 }
 
-.nav-toggler .tog-bar.bar1, .nav-toggler .tog-bar.bar3 {
+.nav-toggler .tog-bar.bar1, .nav-toggler .tog-bar.bar3, .nav-toggler .tog-bar.bar2 {
   -webkit-transform-origin: center;
           transform-origin: center;
 }
@@ -129,5 +140,15 @@ nav a {
   width: 20px;
   -webkit-transform: translate(0, -11px) rotate(45deg);
           transform: translate(0, -11px) rotate(45deg);
+}
+
+.the-wrapper {
+  padding: 50px 16px 10px 16px;
+}
+
+footer {
+  background: #333;
+  color: #ddf845;
+  padding: 16px;
 }
 /*# sourceMappingURL=styles.css.map */
