@@ -16,6 +16,10 @@ import { faHome } from '@fortawesome/free-solid-svg-icons';
 import { HttpClientModule } from '@angular/common/http';
 
 import { ContentService } from './content.service';
+import { AboutComponent } from './about/about.component';
+import { FollowComponent } from './follow/follow.component';
+import { CarouselComponent } from './carousel/carousel.component';
+import { CarouselItemDirective } from './carousel-item.directive';
 
 library.add( faHome );
 
@@ -26,7 +30,11 @@ library.add( faHome );
     HomeComponent,
     ContactComponent,
     ServicesComponent,
-    FooterComponent
+    FooterComponent,
+    AboutComponent,
+    FollowComponent,
+    CarouselComponent,
+    CarouselItemDirective
   ],
   imports: [
     BrowserModule,

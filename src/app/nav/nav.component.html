@@ -1,7 +1,10 @@
 <nav>
   <a routerLink="home">
       <span class="logo">
-        <fa-icon [icon]="faHome" size="2x"></fa-icon>
+        <fa-icon [icon]="faHome"></fa-icon>  
+      </span>
+      <span>
+        <h3>Title...</h3>
       </span>
   </a>
   <div class="nav-toggler" (click)="show=!show" [ngClass]="show ? 'show' : ''">
@@ -10,3 +13,11 @@
     <span class="tog-bar bar3" [ngClass]="show ? 'show' : ''"></span>
   </div>
 </nav>
+<div class="side-wrapper" [ngClass]="show ? 'show' : ''">
+  <ul class="side-menu">
+    <li (click)="show=!show"><a routerLink="/">Home</a></li>
+    <li (click)="show=!show"><a routerLink="services">Services</a></li>
+    <li (click)="show=!show"><a routerLink="about">About</a></li>
+    <li (click)="show=!show"><a routerLink="contact">Contact</a></li>
+  </ul>
+</div>

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { faHome } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faCircle } from '@fortawesome/free-solid-svg-icons';
 
 
 @Component({
@@ -9,6 +9,7 @@ import { faHome } from '@fortawesome/free-solid-svg-icons';
 })
 export class NavComponent implements OnInit {
   faHome = faHome;
+  faCircle = faCircle;
   constructor() { }
 
   ngOnInit() {

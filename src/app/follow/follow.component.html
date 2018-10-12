@@ -1,0 +1,14 @@
+<span class="follow-wrapper" >
+    <span class="follow linkedin" [ngClass]="show ? 'show' : ''">
+        <fa-icon [icon]="faLinkedinIn"></fa-icon>
+    </span> 
+    <span class="follow facebook" [ngClass]="show ? 'show' : ''">
+        <fa-icon [icon]="faFacebookF"></fa-icon>
+    </span>
+    <span class="follow twitter" [ngClass]="show ? 'show' : ''">
+        <fa-icon [icon]="faTwitter"></fa-icon>
+    </span>
+    <span class="follow btn" (click)="show=!show">
+        <fa-icon [icon]="faPlus"></fa-icon>
+    </span>
+</span>
