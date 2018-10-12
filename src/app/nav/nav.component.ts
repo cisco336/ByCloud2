@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { faHome, faCircle } from '@fortawesome/free-solid-svg-icons';
+
 
 @Component({
   selector: 'app-nav',
@@ -6,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent implements OnInit {
-
+  faHome = faHome;
+  faCircle = faCircle;
   constructor() { }
 
   ngOnInit() {

@@ -9,6 +9,20 @@ import { ContactComponent } from './contact/contact.component';
 import { ServicesComponent } from './services/services.component';
 import { FooterComponent } from './footer/footer.component';
 
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faHome } from '@fortawesome/free-solid-svg-icons';
+
+import { HttpClientModule } from '@angular/common/http';
+
+import { ContentService } from './content.service';
+import { AboutComponent } from './about/about.component';
+import { FollowComponent } from './follow/follow.component';
+import { CarouselComponent } from './carousel/carousel.component';
+import { CarouselItemDirective } from './carousel-item.directive';
+
+library.add( faHome );
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,13 +30,19 @@ import { FooterComponent } from './footer/footer.component';
     HomeComponent,
     ContactComponent,
     ServicesComponent,
-    FooterComponent
+    FooterComponent,
+    AboutComponent,
+    FollowComponent,
+    CarouselComponent,
+    CarouselItemDirective
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FontAwesomeModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ContentService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

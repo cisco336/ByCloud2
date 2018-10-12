@@ -1,0 +1,57 @@
+.follow-wrapper {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 89;    
+}
+.follow {
+    position: relative;
+    color: white;
+    border-radius: 100%;
+    padding: 1rem;
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    
+    &.btn {
+        width: 2rem;
+        height: 2rem;
+        background: darken(red, 10%);
+        box-shadow: inset -5px -3px 20px -2px darken(red,25%) ,5px 10px 20px -1px $shadow;
+    }
+    &.twitter, &.facebook, &.linkedin {
+        width: 1rem;
+        height: 1rem;
+        position: absolute;
+        bottom: 8px;
+        transition: all .5s $bounce;
+    }
+    &.twitter {
+        background: darken($twitter-blue, 10%);
+        box-shadow: inset -5px -3px 20px -2px darken($twitter-blue,25%) ,5px 10px 20px -1px $shadow;
+        &.show {
+            @include transform(translate(-75px))
+        }
+    }
+    &.facebook {
+        background: darken($facebook-blue, 10%);
+        box-shadow: inset -5px -3px 20px -2px darken($facebook-blue,25%) ,5px 10px 20px -1px $shadow;
+        &.show {
+            @include transform(translate(-50px, -50px));
+        }
+    }
+    &.linkedin {
+        background: darken($linkedin-blue, 10%);
+        box-shadow: inset -5px -3px 20px -2px darken($linkedin-blue,25%) ,5px 10px 20px -1px $shadow;
+        &.show {
+            @include transform(translate(0px, -75px));
+        }
+    }
+}
