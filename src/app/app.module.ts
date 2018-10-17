@@ -18,8 +18,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { ContentService } from './content.service';
 import { AboutComponent } from './about/about.component';
 import { FollowComponent } from './follow/follow.component';
-import { CarouselComponent } from './carousel/carousel.component';
-import { CarouselItemDirective } from './carousel-item.directive';
 
 library.add( faHome );
 
@@ -32,9 +30,7 @@ library.add( faHome );
     ServicesComponent,
     FooterComponent,
     AboutComponent,
-    FollowComponent,
-    CarouselComponent,
-    CarouselItemDirective
+    FollowComponent
   ],
   imports: [
     BrowserModule,
