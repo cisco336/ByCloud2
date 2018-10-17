@@ -1,0 +1,29 @@
+<div class="container-carousel">
+  <div class="img-container"  *ngFor="let i of contents; let select = index;"
+       [ngClass]="{'selected': select == selectedIndex}">
+    <img src="{{i.imgRoute}}" alt="{{i.imgAlt}}" >
+  </div>
+
+ 
+    <!--</div>-->
+  <div >
+      <div class="text-container">
+        <div class="page-text" *ngFor="let i of contents;let select = index;" [ngClass]="{'selected': select == selectedIndex}">
+          <h4>{{i.category}}</h4>
+          <hr>
+          <p>{{i.content}}</p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="slider">
+      <div class="slide-button-parent-container"  *ngFor="let i of contents; let x =index" (click)="selected(x)" (keypress)="keySelected(x)" >
+         <div class="select-box">
+          <div   class="slide-button" [ngClass]="{'slide-button-select': x == selectedIndex}" >
+          </div>
+         </div>
+      </div>
+    </div>
+  
+</div>
+

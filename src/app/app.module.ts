@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, Injector } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
@@ -14,10 +14,13 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { faHome } from '@fortawesome/free-solid-svg-icons';
 
 import { HttpClientModule } from '@angular/common/http';
-
+import { createCustomElement } from '@angular/elements';
 import { ContentService } from './content.service';
 import { AboutComponent } from './about/about.component';
 import { FollowComponent } from './follow/follow.component';
+import { CarouselComponent } from './carousel/carousel.component';
+
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 library.add( faHome );
 
@@ -30,15 +33,23 @@ library.add( faHome );
     ServicesComponent,
     FooterComponent,
     AboutComponent,
-    FollowComponent
+    FollowComponent,
+    CarouselComponent
   ],
   imports: [
+    NgbModule,
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
     HttpClientModule
   ],
+  entryComponents: [CarouselComponent],
   providers: [ContentService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(private injector: Injector) {
+    const carousel = createCustomElement(CarouselComponent, { injector });
+  }
+  ngDoBootstrap() {}
+ }

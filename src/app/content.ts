@@ -4,6 +4,8 @@ export interface IContent {
     home: boolean;
     category: string;
     author: string;
+    imgRoute: string;
+    imgAlt: string;
     content: string;
     excerpt: string;
 }

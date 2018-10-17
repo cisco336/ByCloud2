@@ -6,7 +6,9 @@
         "category": "3d Modeling",
         "author": "Francisco Arleo",
         "content": "laudantium enim quasi est quidem magnam voluptate ipsam eos\ntempora quo necessitatibus\ndolor quam autem quasi\nreiciendis et nam sapiente accusantium",
-        "excerpt": "excerpt"
+        "excerpt": "excerpt",
+        "imgRoute": "assets/img/1.jpg",
+        "imgAlt": "image 1"
     },
     {
         "id": 2,
@@ -15,7 +17,9 @@
         "category": "App Develop",
         "author": "Francisco Arleo",
         "content": "laudantium enim quasi est quidem magnam voluptate ipsam eos\ntempora quo necessitatibus\ndolor quam autem quasi\nreiciendis et nam sapiente accusantium",
-        "excerpt": "excerpt"
+        "excerpt": "excerpt",
+        "imgRoute": "assets/img/2.png",
+        "imgAlt": "image 2"
     },
     {
         "id": 3,
@@ -24,7 +28,9 @@
         "category": "Web Design",
         "author": "Francisco Arleo",
         "content": "laudantium enim quasi est quidem magnam voluptate ipsam eos\ntempora quo necessitatibus\ndolor quam autem quasi\nreiciendis et nam sapiente accusantium",
-        "excerpt": "excerpt"
+        "excerpt": "excerpt",
+        "imgRoute": "assets/img/3.jpg",
+        "imgAlt": "image 3"
     },
     {
         "id": 4,
@@ -33,7 +39,9 @@
         "category": "Web Design",
         "author": "Francisco Arleo",
         "content": "LLaudantium enim quasi est quidem magnam voluptate ipsam eos\ntempora quo necessitatibus\ndolor quam autem quasi\nreiciendis et nam sapiente accusantium",
-        "excerpt": "excerpt"
+        "excerpt": "excerpt",
+        "imgRoute": "assets/img/1.jpg",
+        "imgAlt": "image 1"
     },
     {
         "id": 5,
@@ -42,6 +50,8 @@
         "category": "Home",
         "author": "Francisco Arleo",
         "content": "laudantium enim quasi est quidem magnam voluptate ipsam eos\ntempora quo necessitatibus\ndolor quam autem quasi\nreiciendis et nam sapiente accusantium",
-        "excerpt": "excerpt"
+        "excerpt": "excerpt",
+        "imgRoute": "assets/img/3.jpg",
+        "imgAlt": "image 3"
     }
 ]
