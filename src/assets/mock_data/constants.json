@@ -1,0 +1,16 @@
+[
+    {
+        "siteName":"SiteName...",
+        "logo":{
+            "pre":"fas",
+            "icon":"coffee",
+            "rotate":"0",
+            "pulse":"false",
+            "spin":"true",
+            "flip":"",
+            "fixedWidth":"true",
+            "size":""
+        },
+        "copyright":"This is the copyright info"
+    }
+]

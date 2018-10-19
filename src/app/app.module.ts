@@ -9,20 +9,28 @@ import { ContactComponent } from './contact/contact.component';
 import { ServicesComponent } from './services/services.component';
 import { FooterComponent } from './footer/footer.component';
 
+// FontAwesome
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faHome } from '@fortawesome/free-solid-svg-icons';
+// FontAwesome Icons
+import { faHome, faCoffee, faCalendar, faCircle } from '@fortawesome/free-solid-svg-icons';
 
 import { HttpClientModule } from '@angular/common/http';
 import { createCustomElement } from '@angular/elements';
+
+// Services
 import { ContentService } from './content.service';
+import { ConstantsService } from './constants.service';
+
+// Components
 import { AboutComponent } from './about/about.component';
 import { FollowComponent } from './follow/follow.component';
 import { CarouselComponent } from './carousel/carousel.component';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
-library.add( faHome );
+
+library.add( faHome, faCoffee, faCalendar, faCircle );
 
 @NgModule({
   declarations: [
@@ -44,7 +52,7 @@ library.add( faHome );
     HttpClientModule
   ],
   entryComponents: [CarouselComponent],
-  providers: [ContentService],
+  providers: [ContentService, ConstantsService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

@@ -6,6 +6,7 @@ $shadow: rgba(0,0,0,.4);
 $twitter-blue: rgb(0, 198, 255);
 $facebook-blue: rgb(59, 89, 152);
 $linkedin-blue: #0077b5;
+$transparent-white: rgba(255,255,255,.3);
 
 // Media Query variables
 $iphone-plus: "only screen and (max-width : 414px)";
@@ -13,3 +14,6 @@ $iphone-plus-land: "only screen and (max-width : 736px)";
 
 //Bounce
 $bounce: cubic-bezier(0.82,-0.65, 0.28, 1.77);
+$soft-bounce: cubic-bezier(0.65,-0.01, 0.49, 1.18);
+$main-box-shadow: 10px 8px 10px -5px;
+$main-text-shadow: 10px 8px 3px;

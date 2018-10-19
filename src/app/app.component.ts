@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { faHome } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -8,5 +7,6 @@ import { faHome } from '@fortawesome/free-solid-svg-icons';
 })
 export class AppComponent {
   title = 'Site';
-  faHome = faHome;
+  copyright = 'This is the copyright info';
+  logo = 'faHome';
 }

@@ -1,5 +1,13 @@
-<footer>
-  <p>
-    footer works!
-  </p>
+<footer *ngFor="let i of constants">
+  <div>
+    <p>
+      {{i.siteName}}
+    </p>
+    <p>
+      <fa-icon [icon]="[i.logo.pre, i.logo.icon]"></fa-icon>
+    </p>
+  </div>
+  <div class="copyright">
+    {{i.copyright}}
+  </div>
 </footer>
