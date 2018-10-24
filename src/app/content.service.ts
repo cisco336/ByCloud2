@@ -8,7 +8,7 @@ import { map, filter, scan } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class ContentService {
-  private _url: '../assets/mock_data/content.json';
+  private _url: string = '../assets/mock_data/content.json';
   constructor(private http: HttpClient) { }
 
   getContent(): Observable<IContent[]> {
