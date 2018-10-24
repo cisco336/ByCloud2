@@ -1,8 +1,9 @@
-<div id="homeCarousel" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item" *ngFor="let cont of contents">
-      <img class="d-block w-100" src="{{cont.imgRoute}}" alt="">
-      <p>{{cont.category}}</p>
-    </div>
-  </div>
-</div>
+<ngb-carousel>
+  <ng-template ngbSlide  *ngFor="let cont of contents$ | async as contents; let i = index" id="{{i}}" >
+    <img [src]='cont.imgRoute' alt="cont.Alt">
+    <h1>{{cont.category}}</h1>
+  </ng-template>
+  <ng-template #loading>
+    <h1>Loading</h1>
+  </ng-template>
+</ngb-carousel>

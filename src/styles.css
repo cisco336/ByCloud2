@@ -10,10 +10,6 @@ a {
   color: inherit;
 }
 
-html, body {
-  height: 100%;
-}
-
 nav {
   background: transparent;
   display: -webkit-box;
@@ -26,7 +22,7 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: absolute;
+  position: fixed;
   width: 100%;
   overflow: hidden;
   -webkit-perspective: 600px;
