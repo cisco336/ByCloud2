@@ -3,9 +3,48 @@
 .carousel {
     .carousel-inner {
         .carousel-item {
+            opacity: .5;
+            display: block;
+            position: absolute;
+            will-change: opacity;
             img {
+                height: 100% !important;
                 width: 100%;
             }
+            &.active {
+                position: relative;
+                opacity: 1;
+                transition: all ease-in-out .5s;
+            }
         }
+    }
+    .carousel-indicators {
+        li {
+            transition: all ease-in-out .5s;
+            &.active {
+                background-color: rgba(255,255,255,.5);
+            }
+            &.active::after {
+                content: '';
+                position: absolute;
+                top: 0%;
+                background-color: white;
+                height: 3px;
+                width: 0px;
+                animation-name: spand;
+                animation-duration: 5s;
+                animation-fill-mode: forwards;
+                animation-timing-function: linear;
+            }
+        }
+    }
+}
+
+@keyframes spand {
+    from {
+        width: 0px;
+    }
+    to {
+        width: 30px;
     }
 }

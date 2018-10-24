@@ -53,5 +53,16 @@
         "excerpt": "excerpt",
         "imgRoute": "assets/img/3.jpg",
         "imgAlt": "image 3"
+    },
+    {
+        "id": 6,
+        "slider":"false",
+        "home":"true",
+        "category": "Home 2",
+        "author": "Francisco Arleo",
+        "content": "laudantium enim quasi est quidem magnam voluptate ipsam eos\ntempora quo necessitatibus\ndolor quam autem quasi\nreiciendis et nam sapiente accusantium",
+        "excerpt": "excerpt",
+        "imgRoute": "assets/img/4.png",
+        "imgAlt": "image 4"
     }
 ]
