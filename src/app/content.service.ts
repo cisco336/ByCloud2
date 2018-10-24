@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { IContent } from './interfaces/content';
 import { Observable } from 'rxjs';
-import { map, filter, scan } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
