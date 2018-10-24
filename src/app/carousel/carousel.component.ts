@@ -17,7 +17,6 @@ export class CarouselComponent implements OnInit {
   constructor(config: NgbCarouselConfig, private _contentService: ContentService) {
     config.showNavigationArrows = true;
     config.showNavigationIndicators = true;
-    
     this._contentService.getContent()
     .subscribe((content) => {
         content.forEach((cont) => {
