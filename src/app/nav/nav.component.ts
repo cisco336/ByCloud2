@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { faHome, faCircle } from '@fortawesome/free-solid-svg-icons';
-
+import { Component, OnInit, Input } from '@angular/core';
+import { ConstantsService } from '../constants.service';
+// import { faHome, faCircle } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-nav',
@@ -8,11 +8,15 @@ import { faHome, faCircle } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent implements OnInit {
-  faHome = faHome;
-  faCircle = faCircle;
-  constructor() { }
+  @Input() title: string;
+  // faHome = faHome;
+  // faCircle = faCircle;
+  public constants = [];
+  constructor(private _constantService: ConstantsService) {}
 
   ngOnInit() {
+    this._constantService.getConstants()
+        .subscribe(constant => this.constants = constant);
   }
   testAlert() {
     alert('I\'ve been clicked');

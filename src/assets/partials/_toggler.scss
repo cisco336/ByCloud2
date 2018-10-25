@@ -13,8 +13,8 @@
     justify-content: center;
     border: 1px solid rgba(0,0,0,.08);
     border-bottom-left-radius: 15px;
-    background: white;
-    box-shadow: 0 8px 20px -5px lighten($dark-gray, 50%);
+    background: $transparent-white;
+    box-shadow: $main-box-shadow $shadow;
     &:hover {
         .tog-bar.bar1 {
             transform: translateX(-5px);

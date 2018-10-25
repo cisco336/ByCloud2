@@ -1,0 +1,64 @@
+@import url("https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css");
+.carousel .carousel-inner .carousel-item {
+  opacity: .5;
+  display: block;
+  position: absolute;
+  will-change: opacity;
+}
+
+.carousel .carousel-inner .carousel-item img {
+  height: 100% !important;
+  width: 100%;
+}
+
+.carousel .carousel-inner .carousel-item.active {
+  position: relative;
+  opacity: 1;
+  -webkit-transition: all ease-in-out .5s;
+  transition: all ease-in-out .5s;
+}
+
+.carousel .carousel-indicators li {
+  -webkit-transition: all ease-in-out .5s;
+  transition: all ease-in-out .5s;
+}
+
+.carousel .carousel-indicators li.active {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.carousel .carousel-indicators li.active::after {
+  content: '';
+  position: absolute;
+  top: 0%;
+  background-color: white;
+  height: 3px;
+  width: 0px;
+  -webkit-animation-name: spand;
+          animation-name: spand;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+@-webkit-keyframes spand {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 30px;
+  }
+}
+
+@keyframes spand {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 30px;
+  }
+}
+/*# sourceMappingURL=carousel.component.css.map */

@@ -22,7 +22,7 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: absolute;
+  position: fixed;
   width: 100%;
   overflow: hidden;
   -webkit-perspective: 600px;
@@ -41,32 +41,41 @@ nav a {
           align-items: center;
   -webkit-perspective: 400px;
           perspective: 400px;
-  -webkit-transition: all 1.2s cubic-bezier(0.82, -0.65, 0.28, 1.77);
-  transition: all 1.2s cubic-bezier(0.82, -0.65, 0.28, 1.77);
+  -webkit-transition: all 1.2s cubic-bezier(0.65, -0.01, 0.49, 1.18);
+  transition: all 1.2s cubic-bezier(0.65, -0.01, 0.49, 1.18);
 }
 
 nav a .logo {
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
   position: relative;
   background: #333;
   color: #ddf845;
   border-radius: 100%;
-  padding: 10px;
-  font-size: 1.5rem;
-  -webkit-box-shadow: inset 2px -3px 20px -5px, 2px 10px 20px -5px rgba(0, 0, 0, 0.4);
-          box-shadow: inset 2px -3px 20px -5px, 2px 10px 20px -5px rgba(0, 0, 0, 0.4);
+  font-size: 1rem;
+  padding: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-shadow: 10px 8px 10px -5px rgba(0, 0, 0, 0.4);
+          box-shadow: 10px 8px 10px -5px rgba(0, 0, 0, 0.4);
   cursor: pointer;
+  -webkit-transition: all ease-out .8s;
+  transition: all ease-out .8s;
 }
 
-nav a:hover {
-  -webkit-transform: rotateY(0.1turn);
-  transform: rotateY(0.1turn);
+nav a .logo.show {
+  background: #ddf845;
+  color: #333;
+  -webkit-box-shadow: inset 5px 4px 7px 4px rgba(0, 0, 0, 0.4);
+          box-shadow: inset 5px 4px 7px 4px rgba(0, 0, 0, 0.4);
 }
 
 nav a:hover span:nth-child(2) {
-  -webkit-transform: rotateY(-10deg);
-  transform: rotateY(-10deg);
+  -webkit-transform: rotateZ(0deg);
+  transform: rotateZ(0deg);
 }
 
 nav a span:nth-child(1) {
@@ -76,13 +85,15 @@ nav a span:nth-child(1) {
 nav a span:nth-child(2) {
   z-index: 98;
   padding: 10px;
-  -webkit-transform-origin: 0% 50%;
-          transform-origin: 0% 50%;
-  -webkit-transform: rotateY(100deg);
-  transform: rotateY(100deg);
-  padding-left: 8px;
-  -webkit-transition: all 1s cubic-bezier(0.82, -0.65, 0.28, 1.77);
-  transition: all 1s cubic-bezier(0.82, -0.65, 0.28, 1.77);
+  -webkit-transform-origin: -100% 0%;
+          transform-origin: -100% 0%;
+  -webkit-transform: rotateZ(-90deg);
+  transform: rotateZ(-90deg);
+  padding-left: 10px;
+  color: #ddf845;
+  text-shadow: 10px 8px 3px rgba(0, 0, 0, 0.4);
+  -webkit-transition: all 1s cubic-bezier(0.65, -0.01, 0.49, 1.18);
+  transition: all 1s cubic-bezier(0.65, -0.01, 0.49, 1.18);
 }
 
 .nav-toggler {
@@ -109,9 +120,9 @@ nav a span:nth-child(2) {
           justify-content: center;
   border: 1px solid rgba(0, 0, 0, 0.08);
   border-bottom-left-radius: 15px;
-  background: white;
-  -webkit-box-shadow: 0 8px 20px -5px #b3b3b3;
-          box-shadow: 0 8px 20px -5px #b3b3b3;
+  background: rgba(255, 255, 255, 0.3);
+  -webkit-box-shadow: 10px 8px 10px -5px rgba(0, 0, 0, 0.4);
+          box-shadow: 10px 8px 10px -5px rgba(0, 0, 0, 0.4);
 }
 
 .nav-toggler:hover .tog-bar.bar1 {
@@ -209,17 +220,47 @@ nav a span:nth-child(2) {
 }
 
 .the-wrapper {
-  padding: 70px 16px 10px 16px;
+  padding: 1rem;
 }
 
 footer {
   background: #333;
   color: #ddf845;
-  padding: 16px;
+}
+
+footer div:first-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+footer div:first-child p {
+  padding: 16px 5px;
+  text-align: right;
+}
+
+footer div:first-child p:first-child {
+  padding-right: 16px;
+}
+
+footer .copyright {
+  clear: both;
+  background: #0d0d0d;
+  font-size: .7em;
+  padding: 10px;
+  text-align: center;
 }
 
 .side-wrapper {
   font-family: 'Rajdhani', sans-serif;
+  z-index: 99;
   background: #333;
   position: absolute;
   width: 100%;
@@ -390,22 +431,5 @@ footer {
 .follow.linkedin.show {
   -webkit-transform: translate(0px, -75px);
   transform: translate(0px, -75px);
-}
-
-.carousel-wrapper {
-  overflow: hidden;
-}
-
-.carousel {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  width: 6000px;
-}
-
-.carousel-inner {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 /*# sourceMappingURL=styles.css.map */

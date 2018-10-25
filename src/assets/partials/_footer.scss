@@ -1,5 +1,24 @@
 footer {
     background: $dark-gray;
     color: $light-green;
-    padding: 16px;
+    // padding: 16px;
+    div:first-child {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: flex-end;
+        p {
+            padding: 16px 5px;
+            text-align: right;
+        }
+        p:first-child {
+            padding-right: 16px;
+        }
+    }
+    .copyright {
+        clear: both;
+        background: darken($dark-gray, 15%);
+        font-size: .7em;
+        padding: 10px;
+        text-align: center;
+    }
 }

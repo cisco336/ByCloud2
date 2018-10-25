@@ -1,5 +1,16 @@
-<section class="carousel-wrapper">
-  <ul class="carousel" #carousel>
-    <li></li>
-  </ul>
-</section>
+<ng-container *ngIf="contents; else loading">
+    <ng-container *ngFor="let c of contents$ | async as contents">
+    </ng-container>
+</ng-container>
+<ngb-carousel *ngIf="contents.length > 0">
+  <ng-template ngbSlide  *ngFor="let cont of contents; let i = index" id="{{i}}" >
+    <img [src]='cont.imgRoute' alt="{{cont.Alt}}">
+    <div class="carousel-caption">
+      <h3>{{cont.category}}</h3>
+      <p>{{cont.excerpt}}</p>
+    </div>
+  </ng-template>
+  <ng-template #loading>
+    <h1>Loading</h1>
+  </ng-template>
+</ngb-carousel>

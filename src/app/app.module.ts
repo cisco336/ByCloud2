@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, Injector } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
@@ -9,19 +9,28 @@ import { ContactComponent } from './contact/contact.component';
 import { ServicesComponent } from './services/services.component';
 import { FooterComponent } from './footer/footer.component';
 
+// FontAwesome
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faHome } from '@fortawesome/free-solid-svg-icons';
+// FontAwesome Icons
+import { faHome, faCoffee, faCalendar, faCircle } from '@fortawesome/free-solid-svg-icons';
 
 import { HttpClientModule } from '@angular/common/http';
+import { createCustomElement } from '@angular/elements';
 
+// Services
 import { ContentService } from './content.service';
+import { ConstantsService } from './constants.service';
+
+// Components
 import { AboutComponent } from './about/about.component';
 import { FollowComponent } from './follow/follow.component';
 import { CarouselComponent } from './carousel/carousel.component';
-import { CarouselItemDirective } from './carousel-item.directive';
 
-library.add( faHome );
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
+
+library.add( faHome, faCoffee, faCalendar, faCircle );
 
 @NgModule({
   declarations: [
@@ -33,16 +42,22 @@ library.add( faHome );
     FooterComponent,
     AboutComponent,
     FollowComponent,
-    CarouselComponent,
-    CarouselItemDirective
+    CarouselComponent
   ],
   imports: [
+    NgbModule,
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
     HttpClientModule
   ],
-  providers: [ContentService],
+  entryComponents: [CarouselComponent],
+  providers: [ContentService, ConstantsService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(private injector: Injector) {
+    const carousel = createCustomElement(CarouselComponent, { injector });
+  }
+  ngDoBootstrap() {}
+ }

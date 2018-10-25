@@ -1,10 +1,10 @@
-<nav>
+<nav *ngFor="let i of constants">
   <a routerLink="home">
-      <span class="logo">
-        <fa-icon [icon]="faHome"></fa-icon>  
+      <span class="logo" [ngClass]="show ? 'show' : ''">
+        <fa-icon [icon]='i.logo.icon'></fa-icon> 
       </span>
       <span>
-        <h3>Title...</h3>
+        <h3>{{i.siteName}}</h3>
       </span>
   </a>
   <div class="nav-toggler" (click)="show=!show" [ngClass]="show ? 'show' : ''">
