@@ -384,20 +384,38 @@ footer .copyright {
 }
 
 .follow.btn {
-  width: 2rem;
-  height: 2rem;
-  background: #cc0000;
-  -webkit-box-shadow: inset -5px -3px 20px -2px maroon, 5px 10px 20px -1px rgba(0, 0, 0, 0.4);
-          box-shadow: inset -5px -3px 20px -2px maroon, 5px 10px 20px -1px rgba(0, 0, 0, 0.4);
+  width: 1rem;
+  height: 1rem;
+  opacity: .3;
+  background: #c11313;
+  -webkit-box-shadow: inset -5px -3px 20px -2px #7b0c0c, 5px 10px 20px -1px rgba(0, 0, 0, 0.4);
+          box-shadow: inset -5px -3px 20px -2px #7b0c0c, 5px 10px 20px -1px rgba(0, 0, 0, 0.4);
+  -webkit-transition: opacity ease-out .2s;
+  transition: opacity ease-out .2s;
+}
+
+.follow.btn:hover, .follow.btn.show {
+  opacity: 1;
 }
 
 .follow.twitter, .follow.facebook, .follow.linkedin {
-  width: 1rem;
-  height: 1rem;
+  width: .8rem;
+  height: .8rem;
   position: absolute;
-  bottom: 8px;
+  bottom: 3px;
+  opacity: 0;
+  will-change: opacity;
   -webkit-transition: all 0.5s cubic-bezier(0.82, -0.65, 0.28, 1.77);
   transition: all 0.5s cubic-bezier(0.82, -0.65, 0.28, 1.77);
+}
+
+.follow.twitter.show, .follow.facebook.show, .follow.linkedin.show {
+  opacity: 1;
+}
+
+.follow.twitter.show:hover, .follow.facebook.show:hover, .follow.linkedin.show:hover {
+  -webkit-transform: scale(2, 2);
+          transform: scale(2, 2);
 }
 
 .follow.twitter {

@@ -21,17 +21,30 @@
     cursor: pointer;
     
     &.btn {
-        width: 2rem;
-        height: 2rem;
-        background: darken(red, 10%);
-        box-shadow: inset -5px -3px 20px -2px darken(red,25%) ,5px 10px 20px -1px $shadow;
-    }
-    &.twitter, &.facebook, &.linkedin {
         width: 1rem;
         height: 1rem;
+        opacity: .3;
+        background: darken($red, 10%);
+        box-shadow: inset -5px -3px 20px -2px darken($red,25%) ,5px 10px 20px -1px $shadow;
+        transition: opacity ease-out .2s;
+        &:hover, &.show {
+            opacity: 1;
+        }
+    }
+    &.twitter, &.facebook, &.linkedin {
+        width: .8rem;
+        height: .8rem;
         position: absolute;
-        bottom: 8px;
+        bottom: 3px;
+        opacity: 0;
+        will-change: opacity;
         transition: all .5s $bounce;
+        &.show {
+            opacity: 1;
+        }
+        &.show:hover {
+            transform: scale(2,2);
+        }
     }
     &.twitter {
         background: darken($twitter-blue, 10%);

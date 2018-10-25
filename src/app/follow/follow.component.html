@@ -8,7 +8,7 @@
     <span class="follow twitter" [ngClass]="show ? 'show' : ''">
         <fa-icon [icon]="faTwitter"></fa-icon>
     </span>
-    <span class="follow btn" (click)="show=!show">
+    <span class="follow btn" (click)="show=!show" [ngClass]="show ? 'show' : ''" title="Click me...">
         <fa-icon [icon]="faPlus"></fa-icon>
     </span>
 </span>

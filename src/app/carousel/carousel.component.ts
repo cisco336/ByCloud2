@@ -1,7 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ContentService } from '../content.service';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
-import { map, filter, scan } from 'rxjs/operators';
 
 @Component({
   selector: 'app-carousel',
@@ -17,11 +16,9 @@ export class CarouselComponent implements OnInit {
   constructor(config: NgbCarouselConfig, private _contentService: ContentService) {
     config.showNavigationArrows = true;
     config.showNavigationIndicators = true;
-    
     this._contentService.getContent()
     .subscribe((content) => {
         content.forEach((cont) => {
-          console.log(typeof(cont.slider.valueOf()));
           if (cont.slider === true) {
             this.contents.push(cont);
           }
@@ -29,8 +26,5 @@ export class CarouselComponent implements OnInit {
       }
     );
   }
-  ngOnInit() {
-    console.log('Init');
-    console.log(this.contents);
-  }
+  ngOnInit() {}
 }

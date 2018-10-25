@@ -1,6 +1,12 @@
 <app-carousel></app-carousel>
 <div class="the-wrapper">
-    <div class="home-content">
-    Home Works!
-  </div>  
+    <ul>
+      <li *ngFor="let cont of contents">
+          <p>ID: {{cont.id}}</p>
+          <p>Author: {{cont.author}}</p>
+          <p>Content: {{cont.content}}</p>
+          <br>
+          <hr>
+      </li>
+    </ul>
 </div>
