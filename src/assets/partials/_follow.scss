@@ -3,10 +3,26 @@
     bottom: 1rem;
     right: 1rem;
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
-    z-index: 89;    
+    z-index: 89;   
+    & span + span {
+        z-index: 99;
+        width: .6rem;
+        height: .6rem;
+        position: absolute;
+        bottom: 3px;
+        opacity: 0;
+        will-change: opacity;
+        transition: all .5s $bounce;
+        @for $i from 1 through 10 {
+            &.show:nth-child(#{$i}) {
+                opacity: 1;
+                bottom: calc(50px * #{$i - 1});
+            }
+        }   
+    } 
 }
 .follow {
     position: relative;
@@ -21,6 +37,7 @@
     cursor: pointer;
     
     &.btn {
+        z-index: 100;
         width: 1rem;
         height: 1rem;
         opacity: .3;
@@ -31,40 +48,16 @@
             opacity: 1;
         }
     }
-    &.twitter, &.facebook, &.linkedin {
-        width: .8rem;
-        height: .8rem;
-        position: absolute;
-        bottom: 3px;
-        opacity: 0;
-        will-change: opacity;
-        transition: all .5s $bounce;
-        &.show {
-            opacity: 1;
-        }
-        &.show:hover {
-            transform: scale(2,2);
-        }
-    }
     &.twitter {
-        background: darken($twitter-blue, 10%);
+        background: $twitter-blue;
         box-shadow: inset -5px -3px 20px -2px darken($twitter-blue,25%) ,5px 10px 20px -1px $shadow;
-        &.show {
-            @include transform(translate(-75px))
-        }
     }
     &.facebook {
-        background: darken($facebook-blue, 10%);
+        background: $facebook-blue;
         box-shadow: inset -5px -3px 20px -2px darken($facebook-blue,25%) ,5px 10px 20px -1px $shadow;
-        &.show {
-            @include transform(translate(-50px, -50px));
-        }
     }
     &.linkedin {
-        background: darken($linkedin-blue, 10%);
+        background: $linkedin-blue;
         box-shadow: inset -5px -3px 20px -2px darken($linkedin-blue,25%) ,5px 10px 20px -1px $shadow;
-        &.show {
-            @include transform(translate(0px, -75px));
-        }
     }
 }

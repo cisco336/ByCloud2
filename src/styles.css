@@ -349,9 +349,9 @@ footer .copyright {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -359,6 +359,68 @@ footer .copyright {
       -ms-flex-pack: center;
           justify-content: center;
   z-index: 89;
+}
+
+.follow-wrapper span + span {
+  z-index: 99;
+  width: .6rem;
+  height: .6rem;
+  position: absolute;
+  bottom: 3px;
+  opacity: 0;
+  will-change: opacity;
+  -webkit-transition: all 0.5s cubic-bezier(0.82, -0.65, 0.28, 1.77);
+  transition: all 0.5s cubic-bezier(0.82, -0.65, 0.28, 1.77);
+}
+
+.follow-wrapper span + span.show:nth-child(1) {
+  opacity: 1;
+  bottom: calc(50px * 0);
+}
+
+.follow-wrapper span + span.show:nth-child(2) {
+  opacity: 1;
+  bottom: calc(50px * 1);
+}
+
+.follow-wrapper span + span.show:nth-child(3) {
+  opacity: 1;
+  bottom: calc(50px * 2);
+}
+
+.follow-wrapper span + span.show:nth-child(4) {
+  opacity: 1;
+  bottom: calc(50px * 3);
+}
+
+.follow-wrapper span + span.show:nth-child(5) {
+  opacity: 1;
+  bottom: calc(50px * 4);
+}
+
+.follow-wrapper span + span.show:nth-child(6) {
+  opacity: 1;
+  bottom: calc(50px * 5);
+}
+
+.follow-wrapper span + span.show:nth-child(7) {
+  opacity: 1;
+  bottom: calc(50px * 6);
+}
+
+.follow-wrapper span + span.show:nth-child(8) {
+  opacity: 1;
+  bottom: calc(50px * 7);
+}
+
+.follow-wrapper span + span.show:nth-child(9) {
+  opacity: 1;
+  bottom: calc(50px * 8);
+}
+
+.follow-wrapper span + span.show:nth-child(10) {
+  opacity: 1;
+  bottom: calc(50px * 9);
 }
 
 .follow {
@@ -384,6 +446,7 @@ footer .copyright {
 }
 
 .follow.btn {
+  z-index: 100;
   width: 1rem;
   height: 1rem;
   opacity: .3;
@@ -398,56 +461,21 @@ footer .copyright {
   opacity: 1;
 }
 
-.follow.twitter, .follow.facebook, .follow.linkedin {
-  width: .8rem;
-  height: .8rem;
-  position: absolute;
-  bottom: 3px;
-  opacity: 0;
-  will-change: opacity;
-  -webkit-transition: all 0.5s cubic-bezier(0.82, -0.65, 0.28, 1.77);
-  transition: all 0.5s cubic-bezier(0.82, -0.65, 0.28, 1.77);
-}
-
-.follow.twitter.show, .follow.facebook.show, .follow.linkedin.show {
-  opacity: 1;
-}
-
-.follow.twitter.show:hover, .follow.facebook.show:hover, .follow.linkedin.show:hover {
-  -webkit-transform: scale(2, 2);
-          transform: scale(2, 2);
-}
-
 .follow.twitter {
-  background: #009ecc;
+  background: #00c6ff;
   -webkit-box-shadow: inset -5px -3px 20px -2px #006380, 5px 10px 20px -1px rgba(0, 0, 0, 0.4);
           box-shadow: inset -5px -3px 20px -2px #006380, 5px 10px 20px -1px rgba(0, 0, 0, 0.4);
 }
 
-.follow.twitter.show {
-  -webkit-transform: translate(-75px);
-  transform: translate(-75px);
-}
-
 .follow.facebook {
-  background: #2d4373;
+  background: #3b5998;
   -webkit-box-shadow: inset -5px -3px 20px -2px #17233c, 5px 10px 20px -1px rgba(0, 0, 0, 0.4);
           box-shadow: inset -5px -3px 20px -2px #17233c, 5px 10px 20px -1px rgba(0, 0, 0, 0.4);
 }
 
-.follow.facebook.show {
-  -webkit-transform: translate(-50px, -50px);
-  transform: translate(-50px, -50px);
-}
-
 .follow.linkedin {
-  background: #005582;
+  background: #0077b5;
   -webkit-box-shadow: inset -5px -3px 20px -2px #002336, 5px 10px 20px -1px rgba(0, 0, 0, 0.4);
           box-shadow: inset -5px -3px 20px -2px #002336, 5px 10px 20px -1px rgba(0, 0, 0, 0.4);
-}
-
-.follow.linkedin.show {
-  -webkit-transform: translate(0px, -75px);
-  transform: translate(0px, -75px);
 }
 /*# sourceMappingURL=styles.css.map */
