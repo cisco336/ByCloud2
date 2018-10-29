@@ -4,6 +4,15 @@
   display: block;
   position: absolute;
   will-change: opacity;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .carousel .carousel-inner .carousel-item img {
@@ -18,7 +27,16 @@
   transition: all ease-in-out .5s;
 }
 
+.carousel .carousel-inner .carousel-item .carousel-caption {
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  background: rgba(51, 51, 51, 0.404);
+}
+
 .carousel .carousel-indicators li {
+  height: 1px;
   -webkit-transition: all ease-in-out .5s;
   transition: all ease-in-out .5s;
 }
@@ -31,8 +49,10 @@
   content: '';
   position: absolute;
   top: 0%;
-  background-color: white;
-  height: 3px;
+  background-color: #ddf845;
+  -webkit-box-shadow: 0px 0px 8px 1px #ddf845;
+          box-shadow: 0px 0px 8px 1px #ddf845;
+  height: 1px;
   width: 0px;
   -webkit-animation-name: spand;
           animation-name: spand;

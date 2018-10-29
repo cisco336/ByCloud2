@@ -16,5 +16,10 @@ $iphone-plus-land: "only screen and (max-width : 736px)";
 //Bounce
 $bounce: cubic-bezier(0.82,-0.65, 0.28, 1.77);
 $soft-bounce: cubic-bezier(0.65,-0.01, 0.49, 1.18);
+
+// Shadows
 $main-box-shadow: 10px 8px 10px -5px;
 $main-text-shadow: 10px 8px 3px;
+
+// Glow
+$green-glow: 0px 0px 8px 1px;
