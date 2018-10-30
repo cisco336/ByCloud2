@@ -56,7 +56,7 @@
     },
     {
         "id": 6,
-        "slider":true,
+        "slider":false,
         "home":true,
         "category": "Home 2",
         "author": "Francisco Arleo",

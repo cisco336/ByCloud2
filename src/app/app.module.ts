@@ -1,3 +1,5 @@
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, Injector } from '@angular/core';
 
@@ -13,7 +15,7 @@ import { FooterComponent } from './footer/footer.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 // FontAwesome Icons
-import { faHome, faCoffee, faCalendar, faCircle } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faCoffee, faCalendar, faCircle, faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 
 import { HttpClientModule } from '@angular/common/http';
 import { createCustomElement } from '@angular/elements';
@@ -30,7 +32,7 @@ import { CarouselComponent } from './carousel/carousel.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
-library.add( faHome, faCoffee, faCalendar, faCircle );
+library.add( faHome, faCoffee, faCalendar, faCircle, faChevronRight, faChevronLeft );
 
 @NgModule({
   declarations: [
@@ -46,6 +48,7 @@ library.add( faHome, faCoffee, faCalendar, faCircle );
   ],
   imports: [
     NgbModule,
+    BrowserAnimationsModule,
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,

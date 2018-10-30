@@ -2,11 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { ContentService } from '../content.service';
 import { Observable } from 'rxjs';
 import { IContent } from '../interfaces/content';
+import { fade } from '../animations';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
+  animations: [ fade ]
 })
 export class HomeComponent implements OnInit {
   public contents = [];

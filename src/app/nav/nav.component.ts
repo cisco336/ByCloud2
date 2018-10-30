@@ -1,11 +1,12 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ConstantsService } from '../constants.service';
-// import { faHome, faCircle } from '@fortawesome/free-solid-svg-icons';
+import { fade, move } from '../animations';
 
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
-  styleUrls: ['./nav.component.css']
+  styleUrls: ['./nav.component.css'],
+  animations: [ fade, move ]
 })
 export class NavComponent implements OnInit {
   @Input() title: string;
