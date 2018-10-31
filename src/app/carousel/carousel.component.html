@@ -5,9 +5,10 @@
 <ngb-carousel *ngIf="contents.length > 0">
   <ng-template ngbSlide  *ngFor="let cont of contents; let i = index" id="{{i}}" >
     <img [src]='cont.imgRoute' alt="{{cont.Alt}}">
-    <div @fade class="carousel-caption">
+    <div @move class="carousel-caption">
       <h3>{{cont.category}}</h3>
       <p>{{cont.content}}</p>
+      <button @move mat-raised-button color="accent" class="appButton">Button</button>
     </div>
     <div class="carousel-gradient"></div>
   </ng-template>

@@ -5,7 +5,8 @@ nav {
     justify-content: space-between;
     align-items: center;
     position: fixed;
-    width: 100%;
+    padding: 1rem;
+    width: 25%;
     overflow: hidden;
     perspective: 600px;
     a {
@@ -36,7 +37,6 @@ nav {
             }
         }
         &:hover {
-            // @include transform(rotateY(.1turn));
             span:nth-child(2) {
                 @include transform(rotateZ(0deg));
             }

@@ -1,12 +1,12 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ConstantsService } from '../constants.service';
-import { fade, move } from '../animations';
+import { animationsAll } from '../animations/animations';
 
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.css'],
-  animations: [ fade, move ]
+  animations: [ animationsAll ]
 })
 export class NavComponent implements OnInit {
   @Input() title: string;

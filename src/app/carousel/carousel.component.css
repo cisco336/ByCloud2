@@ -1,5 +1,6 @@
 @import url(c:\Users\francisco.arleo\Desktop\workspace\Angular\ByBloudV2\src\assets\extra-css\bootstrap\bootstrap.min.css);
 @import url("https://fonts.googleapis.com/css?family=Rajdhani");
+@import url(c:\Users\francisco.arleo\Desktop\workspace\Angular\ByBloudV2\node_modules\@angular\material\prebuilt-themes\purple-green.css);
 * {
   outline: none !important;
 }
@@ -31,10 +32,22 @@
 
 .carousel .carousel-inner .carousel-item.active {
   height: 100%;
+  overflow: hidden;
   position: relative;
   opacity: 1;
   -webkit-transition: all ease-in-out .5s;
   transition: all ease-in-out .5s;
+}
+
+.carousel .carousel-inner .carousel-item.active img {
+  -webkit-animation-name: amply;
+          animation-name: amply;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
 }
 
 .carousel .carousel-inner .carousel-item .carousel-caption {
@@ -58,7 +71,7 @@
 .carousel .carousel-indicators {
   bottom: auto;
   top: 25px;
-  z-index: 110;
+  z-index: 98;
 }
 
 .carousel .carousel-indicators li {
@@ -90,6 +103,13 @@
           animation-timing-function: linear;
 }
 
+.appButton {
+  background: #ddf845 !important;
+  font-family: inherit;
+  -webkit-box-shadow: 10px 8px 10px -5px rgba(0, 0, 0, 0.4) !important;
+          box-shadow: 10px 8px 10px -5px rgba(0, 0, 0, 0.4) !important;
+}
+
 @-webkit-keyframes spand {
   from {
     width: 0px;
@@ -105,6 +125,28 @@
   }
   to {
     width: 30px;
+  }
+}
+
+@-webkit-keyframes amply {
+  from {
+    -webkit-filter: grayscale(1);
+            filter: grayscale(1);
+  }
+  to {
+    -webkit-filter: grayscale(0);
+            filter: grayscale(0);
+  }
+}
+
+@keyframes amply {
+  from {
+    -webkit-filter: grayscale(1);
+            filter: grayscale(1);
+  }
+  to {
+    -webkit-filter: grayscale(0);
+            filter: grayscale(0);
   }
 }
 /*# sourceMappingURL=carousel.component.css.map */

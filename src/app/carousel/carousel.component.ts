@@ -1,7 +1,7 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, NgModule } from '@angular/core';
 import { ContentService } from '../content.service';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
-import { fade } from '../animations';
+import { animationsAll } from '../animations/animations';
 
 @Component({
   selector: 'app-carousel',
@@ -9,7 +9,7 @@ import { fade } from '../animations';
   styleUrls: ['./carousel.component.css'],
   providers: [NgbCarouselConfig],
   encapsulation: ViewEncapsulation.Native,
-  animations: [ fade ]
+  animations: [ animationsAll ]
 })
 export class CarouselComponent implements OnInit {
   public contents = [];

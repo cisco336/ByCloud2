@@ -1,12 +1,21 @@
 <app-carousel></app-carousel>
 <div @fade class="the-wrapper">
-    <ul>
-      <li *ngFor="let cont of contents">
-          <p>ID: {{cont.id}}</p>
-          <p>Author: {{cont.author}}</p>
-          <p>Content: {{cont.content}}</p>
-          <br>
-          <hr>
-      </li>
-    </ul>
+    <div class="home-principal" *ngFor="let cont of principal">
+        <h3>{{cont.content}}</h3>
+    </div>
+    <div class="home">
+        <div *ngFor="let cont of contents" class="mat-card">
+            <div class="card-header">
+                <h3>ID: {{cont.id}}</h3>
+                <h5>Author: {{cont.author}}</h5>
+            </div>
+            <img src="{{cont.imgRoute}}" alt="{{cont.imgAlt}}" class="card-img">
+            <div class="card-content">
+                <p>{{cont.excerpt}}</p>
+            </div>
+            <div class="card-actions">
+                <button mat-stroked-button>Button</button>
+            </div>
+        </div>
+    </div>
 </div>

@@ -31,6 +31,8 @@ import { CarouselComponent } from './carousel/carousel.component';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
+// Angualar Material
+import { MatButtonModule, MatCardModule } from '@angular/material';
 
 library.add( faHome, faCoffee, faCalendar, faCircle, faChevronRight, faChevronLeft );
 
@@ -52,7 +54,9 @@ library.add( faHome, faCoffee, faCalendar, faCircle, faChevronRight, faChevronLe
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
-    HttpClientModule
+    HttpClientModule,
+    MatButtonModule,
+    MatCardModule
   ],
   entryComponents: [CarouselComponent],
   providers: [ContentService, ConstantsService],

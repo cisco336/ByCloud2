@@ -1,4 +1,6 @@
 <app-nav [title]="title"></app-nav>
-<router-outlet></router-outlet>
+<div [@fade]="prepareRoute(outlet)">
+    <router-outlet #outlet="outlet"></router-outlet>
+</div>
 <app-follow></app-follow>
 <app-footer></app-footer>

@@ -1,6 +1,7 @@
 @import '../../assets/extra-css/bootstrap/bootstrap.min.css';
 @import '../../assets/partials/_variables.scss';
 @import '../../assets/partials/fonts';
+@import '../../../node_modules/@angular/material/prebuilt-themes/purple-green.css';
 * {
     outline: none !important;
 }
@@ -22,9 +23,16 @@
             }
             &.active {
                 height: 100%;
+                overflow: hidden;
                 position: relative;
                 opacity: 1;
                 transition: all ease-in-out .5s;
+                img {
+                    animation-name: amply;
+                    animation-duration: 3s;
+                    animation-fill-mode: forwards;
+                    animation-timing-function: linear;
+                }
             }
             & .carousel-caption {
                 right: 0px;
@@ -46,7 +54,7 @@
     .carousel-indicators {
         bottom: auto;
         top: 25px;
-        z-index: 110;
+        z-index: 98;
         li {
             height: 1px;
             transition: all ease-in-out .5s;
@@ -69,12 +77,25 @@
         }
     }
 }
-
+.appButton {
+    background: $light-green !important;
+    font-family: inherit;
+    box-shadow: $main-box-shadow $shadow !important;
+}
 @keyframes spand { 
     from {
         width: 0px;
     }
     to {
         width: 30px;
+    }
+}
+
+@keyframes amply {
+    from {
+        filter: grayscale(1);
+    }
+    to {
+        filter: grayscale(0);
     }
 }
