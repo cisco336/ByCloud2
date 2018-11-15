@@ -7,7 +7,7 @@ import { ContentService } from '../content.service';
   styleUrls: ['./services.component.css']
 })
 export class ServicesComponent implements OnInit {
-  public contents = [];
+  public contents: any[] = [];
   constructor(private _contentService: ContentService) { }
 
   ngOnInit() {
